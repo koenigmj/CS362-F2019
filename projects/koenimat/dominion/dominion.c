@@ -1097,6 +1097,7 @@ int mineCardEffect(int card, int choice1, int choice2, int choice3, struct gameS
 int j;
 int i;
 int currentPlayer = whoseTurn(state);
+int nextPlayer = currentPlayer + 1;
 
 j = state->hand[currentPlayer][choice1];  //store card we will trash
 
@@ -1153,7 +1154,7 @@ if (choice2)
 else if (choice1)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
        {
        //discard hand
-       while(numHandCards(state) >= 0)
+       while(numHandCards(state) > 0)
             {
             discardCard(handPos, currentPlayer, state, 0);
             }
