@@ -1097,6 +1097,7 @@ int mineCardEffect(int card, int choice1, int choice2, int choice3, struct gameS
 int j;
 int i;
 int currentPlayer = whoseTurn(state);
+int nextPlayer = currentPlayer + 1;
 
 j = state->hand[currentPlayer][choice1];  //store card we will trash
 
